@@ -41,6 +41,8 @@ img {
     --CORN-FLOWER-color: #E7E9FC;
     --CLOUD-color: #F4F4FD;
     --OCEAN-color: #404BBF;
+    --GREEN-color: #31D0AA;
+    --LIGHT-SLATE-color: #8E8F99;
     --FONT-LOGO: "Raleway", sans-serif;
 }
 
@@ -215,15 +217,35 @@ img {
     display: flex;
 
 
+
 }
 
 .features-list-item {
-    /* flex-basis: calc((1128px-72px)/4) */
-    flex-basis: 264px;
+    /* flex-basis: 264px; */
+    /* ширина вьюпорта - двойний проміжок між флекс-елементами ділимо на кільк. елементів */
+    width: calc((100% - 40px) / 3);
 }
 
 .features-list-item:not(:last-child) {
     margin-right: 24px;
+}
+
+.icon-features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 264px;
+    height: 112px;
+    background-color: var(--CLOUD-color);
+    margin-bottom: 8px;
+    border-radius: 4px;
+}
+
+.icon-features {
+    width: 64px;
+    height: 64px;
+
+
 }
 
 .features-title {
@@ -326,10 +348,94 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--SLATE-color);
+    margin-bottom: 8px;
     text-align: center;
 }
 
+.social-link-list {
+    display: flex;
+    gap: 24px;
 
+}
+
+.social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--IRIS-color);
+}
+
+/* .icon-social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.social-icon {
+    width: 16px;
+    height: 16px;
+    fill: var(--CLOUD-color);
+}
+
+.social-item:hover,
+.social-item:focus {
+    background-color: var(--OCEAN-color)
+}
+
+/* section CUSTOMERS */
+
+.customers {
+    text-align: center;
+
+    padding-top: 120px;
+    padding-bottom: 120px;
+}
+
+.customers-title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    color: var(--NAVY-BLUE-color);
+    margin-bottom: 72px;
+}
+
+.customers-list {
+    display: flex;
+    gap: 24px;
+
+}
+
+
+
+.customers-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 168px;
+    height: 88px;
+    color: var(--LIGHT-SLATE-color);
+    border: 1px solid var(--LIGHT-SLATE-color);
+    border-radius: 4px;
+}
+
+.customers-link:hover {
+    color: var(--OCEAN-color);
+    border-color: var(--OCEAN-color);
+}
+
+
+.customers-logo {
+    width: 104px;
+    height: 56px;
+
+    fill: currentColor;
+}
 
 /* footer */
 /* section SLOGAN */
@@ -337,6 +443,42 @@ img {
     padding-top: 100px;
     padding-bottom: 100px;
     background-color: var(--NAVY-BLUE-color);
+}
+
+.footer-container {
+    display: flex;
+    gap: 120px;
+}
+
+.social-title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--WHITE-color);
+    margin-bottom: 16px;
+
+}
+
+.footer-social-list {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+}
+
+.footer-social-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--IRIS-color);
+}
+
+.footer-social-item:hover,
+.footer-social-item:focus {
+    background-color: var(--GREEN-color)
 }
 
 .logo-footer {
