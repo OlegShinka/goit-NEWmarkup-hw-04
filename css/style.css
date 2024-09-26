@@ -36,6 +36,7 @@ img {
     --NAVY-BLUE-color: #2E2F42;
     --WHITE-color: #ffffff;
     --SLATE-color: #434455;
+    --BG-hero: rgba(46, 47, 66, 0.7);
     /*body text*/
     --IRIS-color: #4D5AE5;
     --CORN-FLOWER-color: #E7E9FC;
@@ -77,13 +78,10 @@ img {
 /* HEADER */
 
 .page-header {
-    display: flex;
-    justify-content: space-between;
     border-bottom: 1px solid var(--CORN-FLOWER-color);
     box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-
-
 }
+
 
 .main-nav {
     display: flex;
@@ -98,10 +96,8 @@ img {
 }
 
 .nav-list {
-
     display: flex;
     gap: 40px;
-
 }
 
 
@@ -143,21 +139,27 @@ img {
 
 }
 
+
+
 .nav-link:hover,
 .nav-link:focus {
     color: var(--OCEAN-color);
 }
 
-.nav-link:hover::after,
-.nav-link:focus::after {
+.nav-link::after {
     /* display: inline-block; */
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     content: "";
     width: 100%;
     height: 4px;
     border-radius: 2px;
     background-color: var(--OCEAN-color);
+    opacity: 0;
+}
+
+.current::after {
+    opacity: 1;
 }
 
 .address {
@@ -187,6 +189,9 @@ img {
 .hero {
     text-align: center;
     background-color: var(--NAVY-BLUE-color);
+    background-image: linear-gradient(var(--BG-hero), var(--BG-hero)), url(../images/hero/people-office\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding-top: 188px;
     padding-bottom: 188px;
 }
@@ -219,7 +224,7 @@ img {
     cursor: pointer;
     border: none;
     border-radius: 4px;
-
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     padding: 16px 32px 16px 32px;
     margin: 0 auto;
 
@@ -266,12 +271,10 @@ img {
     border-radius: 4px;
 }
 
-.icon-features {
+/* .icon-features {
     width: 64px;
     height: 64px;
-
-
-}
+} */
 
 .features-title {
     font-size: 20px;
@@ -400,8 +403,6 @@ img {
 } */
 
 .social-icon {
-    width: 16px;
-    height: 16px;
     fill: var(--CLOUD-color);
 }
 
@@ -456,9 +457,6 @@ img {
 
 
 .customers-logo {
-    width: 104px;
-    height: 56px;
-
     fill: currentColor;
 }
 
@@ -563,6 +561,7 @@ img {
     border-radius: 4px;
     border: 1px solid var(--CORN-FLOWER-color);
     padding: 12px 24px 12px 24px;
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.12), 0px 2px 1px 0px rgba(0, 0, 0, 0.08), 0px 3px 1px 0px rgba(0, 0, 0, 0.1);
 }
 
 .btn-menu:hover,
